@@ -5,8 +5,9 @@
  * make led blink
  */
 
-\\ iniyialize led to pin 13
-int led = 13;
+int led = 9;
+int brightness = 0;
+int fadeAmount = 5;
 
 void setup() {
   // using function pinMode call led provide output
@@ -14,9 +15,10 @@ void setup() {
 }
 
 void loop() {
-  // function digitalWrite tells led to turn on, wait 1 second, turn led off, wait 1 second, repeat
-  digitalWrite(led, HIGH);
-  delay(1500);
-  digitalWrite(led, LOW);
-  delay(500);
+  analogWrite(led, brightness);
+  brightness = brightness + fadeAmount;
+  if (brightness == 0 || brightness == 255) {
+    fadeAmount = -fadeAmount;
+  }
+  delay(30);
 }
