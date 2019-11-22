@@ -16,7 +16,7 @@ void setup() {
 void loop() {
   // function digitalWrite tells led to turn on, wait 1 second, turn led off, wait 1 second, repeat
   digitalWrite(led, HIGH);
-  delay(1000);
+  delay(1500);
   digitalWrite(led, LOW);
-  delay(1000);
+  delay(500);
 }
