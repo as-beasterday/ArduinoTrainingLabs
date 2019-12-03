@@ -27,9 +27,8 @@ void loop() {
   Serial.println(buttonState);
   if (buttonState==HIGH){
     digitalWrite(led, HIGH);
-    delay(1500);
+  }else{
     digitalWrite(led, LOW);
-    delay(500);
   }
-  delay(1);
+  delay(100);
 }
