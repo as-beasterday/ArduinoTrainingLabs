@@ -23,13 +23,13 @@ void setup() {
 }
 
 void loop() {
-  // function digitalWrite tells led to turn on, wait 1 second, turn led off, wait 1 second, repeat
-  digitalWrite(led, HIGH);
-  delay(1500);
-  digitalWrite(led, LOW);
-  delay(500);
-  
   int buttonState = digitalRead(pushButton);
   Serial.println(buttonState);
-  delay(250);
+  if (buttonState==HIGH){
+    digitalWrite(led, HIGH);
+    delay(1500);
+    digitalWrite(led, LOW);
+    delay(500);
+  }
+  delay(1);
 }
