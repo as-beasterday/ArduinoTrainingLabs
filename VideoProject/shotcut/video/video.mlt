@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mlt LC_NUMERIC="C" version="6.17.0" title="Shotcut version 19.10.20" producer="main_bin">
+<mlt LC_NUMERIC="C" version="6.19.0" title="Shotcut version 19.12.16" producer="main_bin">
   <profile description="HD 1080p 25 fps" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="25" frame_rate_den="1" colorspace="709"/>
   <producer id="producer0" title="Anonymous Submission" in="00:00:00.000" out="00:02:31.000">
     <property name="length">00:02:31.040</property>
@@ -45,7 +45,7 @@
   <producer id="black" in="00:00:00.000" out="00:02:31.040">
     <property name="length">00:02:31.080</property>
     <property name="eof">pause</property>
-    <property name="resource">/snap/shotcut/55/Shotcut.app/0</property>
+    <property name="resource">0</property>
     <property name="aspect_ratio">1</property>
     <property name="mlt_service">color</property>
     <property name="mlt_image_format">rgb24a</property>
@@ -75,6 +75,7 @@
   <playlist id="playlist0">
     <property name="shotcut:video">1</property>
     <property name="shotcut:name">V1</property>
+    <property name="shotcut:lock">0</property>
     <blank length="00:00:00.040"/>
     <entry producer="producer2" in="00:00:00.000" out="00:02:31.000"/>
   </playlist>
@@ -99,25 +100,27 @@
       <property name="mlt_service">affine</property>
       <property name="shotcut:filter">affineRotate</property>
       <property name="transition.fix_rotate_x">90</property>
-      <property name="transition.scale_x">1.33333</property>
+      <property name="transition.scale_x">0.75</property>
       <property name="transition.ox">800</property>
       <property name="transition.oy">1300</property>
       <property name="transition.threads">0</property>
-      <property name="transition.scale_y">1.33333</property>
+      <property name="transition.scale_y">0.75</property>
       <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="transition.invert_scale">1</property>
     </filter>
   </producer>
   <playlist id="playlist1">
     <property name="shotcut:video">1</property>
     <property name="shotcut:name">V2</property>
-    <property name="shotcut:lock">1</property>
+    <property name="shotcut:lock">0</property>
     <blank length="00:01:59.960"/>
     <entry producer="producer3" in="00:00:00.000" out="00:00:09.880"/>
   </playlist>
-  <tractor id="tractor0" title="Shotcut version 19.10.20" global_feed="1" in="00:00:00.000" out="00:02:31.040">
+  <tractor id="tractor0" title="Shotcut version 19.12.16" global_feed="1" in="00:00:00.000" out="00:02:31.040">
     <property name="shotcut">1</property>
     <property name="shotcut:projectAudioChannels">2</property>
     <property name="shotcut:projectFolder">1</property>
+    <property name="shotcut:scaleFactor">0.542192</property>
     <track producer="background"/>
     <track producer="playlist0"/>
     <track producer="playlist1" hide="audio"/>
